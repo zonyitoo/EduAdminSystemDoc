@@ -1,0 +1,93 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{CJKutf8}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{times}
+\usepackage{caption}
+%\usepackage{titlesec}
+\usepackage[pdftex, 
+pdfstartview=FitH, unicode=true, bookmarksnumbered=true,
+bookmarksopen=true, colorlinks=false,
+pdfborder={1 0 0}, citecolor=black ]{hyperref}
+
+\setlength{\parindent}{2em}
+\addtolength{\textwidth}{4.0cm}
+\addtolength{\textheight}{2.0cm}
+\addtolength{\voffset}{-2cm}
+\addtolength{\hoffset}{-1.5cm}
+
+\renewcommand\contentsname{目录}
+\renewcommand\figurename{图}
+\renewcommand\tablename{表}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+{3.25ex \@plus1ex \@minus.2ex}%
+{1.5ex \@plus.2ex}%
+{\normalfont\normalsize\bfseries}}
+\makeatother
+
+\begin{document}
+\begin{CJK*}{UTF8}{stzhongsong}
+
+\title{教务系统需求分析与设计}
+\author{项目组成员：叶晓军\quad 杨曦华\quad 钟宇腾\quad 柯毅豪}
+\date{2012年10月8日}
+
+\input{titlepage.tex}
+
+\noindent \textbf{\LARGE 文档控制}\\
+
+\noindent \textbf{\large 更改记录}\\
+
+\begin{tabularx}{\textwidth}{|l|l|l|X|}
+  \hline
+  \textbf{日期} & \textbf{作者} & \textbf{版本} & \textbf{更改参考}\\
+  \hline
+  2012-9-27&叶晓军，杨曦华，钟宇腾，柯毅豪&V0.1&需求文档初版\\
+  \hline
+  2012-10-11&叶晓军，杨曦华，钟宇腾，柯毅豪&V0.2&语言表达错误及文章格式修正\\
+  \hline
+  2012-10-12&钟宇腾&V0.3&文章排版修正\\
+  \hline
+  2012-10-13&杨曦华，叶晓军，钟宇腾&V0.4&设计文档初版\\
+  \hline
+  2012-10-13&柯毅豪，杨曦华&V0.4&需求文档修正\\
+  \hline
+  2012-10-14&杨曦华&V0.5&设计文档增加插图\\
+  \hline
+  2012-10-14&叶晓军，钟宇腾&V0.5&设计文档编写\\
+  \hline
+  2012-10-21&叶晓军，杨曦华，钟宇腾&V0.6&设计文档排版及插图修正\\
+  \hline
+\end{tabularx}
+\newpage
+
+\tableofcontents
+\newpage
+
+\pagestyle{fancy}
+\lhead{教务系统}
+\rhead{分析与设计}
+
+% 教务系统分析
+\input{analysis.tex}
+
+% 教务系统设计
+\input{design.tex}
+
+% 分工
+\input{divtask.tex}
+
+\newpage
+\end{CJK*}
+\end{document}
