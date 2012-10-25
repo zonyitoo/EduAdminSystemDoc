@@ -7,6 +7,7 @@
 
 ## 编译
 * 安装字体
+
 进入`mkfont`目录，修改`mkfont.sh`
 
 ```bash
