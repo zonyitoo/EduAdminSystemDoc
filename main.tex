@@ -11,6 +11,7 @@
 \usepackage{fancyhdr}
 \usepackage{times}
 \usepackage{caption}
+\usepackage{afterpage}
 %\usepackage{titlesec}
 \usepackage[pdftex, 
 pdfstartview=FitH, unicode=true, bookmarksnumbered=true,
@@ -38,11 +39,18 @@ pdfborder={1 0 0}, citecolor=black ]{hyperref}
 {\normalfont\normalsize\bfseries}}
 \makeatother
 
+\makeatletter
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\z@}%
+{3.25ex \@plus1ex \@minus.2ex}%
+{1.5ex \@plus.2ex}%
+{\normalfont\normalsize\bfseries}}
+\makeatother
+
 \begin{document}
 \begin{CJK*}{UTF8}{stzhongsong}
 
 \title{教务系统需求分析与设计}
-\author{项目组成员：叶晓军\quad 杨曦华\quad 钟宇腾\quad 柯毅豪}
+\author{叶晓军\quad 杨曦华\quad 钟宇腾\quad 柯毅豪}
 \date{2012年10月8日}
 
 \input{titlepage.tex}
@@ -50,28 +58,32 @@ pdfborder={1 0 0}, citecolor=black ]{hyperref}
 \noindent \textbf{\LARGE 文档控制}\\
 
 \noindent \textbf{\large 更改记录}\\
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{|l|l|l|X|}
+    \hline
+    \textbf{日期} & \textbf{作者} & \textbf{版本} & \textbf{更改参考}\\
+    \hline
+    2012-09-27&叶晓军，杨曦华，钟宇腾，柯毅豪&V0.1&需求文档初版\\
+    \hline
+    2012-10-11&叶晓军，杨曦华，钟宇腾，柯毅豪&V0.2&语言表达错误及文章格式修正\\
+    \hline
+    2012-10-12&钟宇腾&V0.3&文章排版修正\\
+    \hline
+    2012-10-13&杨曦华，叶晓军，钟宇腾&V0.4&设计文档初版\\
+    \hline
+    2012-10-13&柯毅豪，杨曦华&V0.4&需求文档修正\\
+    \hline
+    2012-10-14&杨曦华&V0.5&设计文档增加插图\\
+    \hline
+    2012-10-14&叶晓军，钟宇腾&V0.5&设计文档编写\\
+    \hline
+    2012-10-21&叶晓军，杨曦华，钟宇腾&V0.6(beta1)&设计文档排版及插图修正\\
+    \hline
+    2012-10-30&叶晓军，杨曦华，钟宇腾，柯毅豪&V0.7(beta2)&杨曦华修正全文档语言表述及插图错误，钟宇腾修正排版错误，全组共同校正\\
+    \hline
+  \end{tabularx}
+\end{table}
 
-\begin{tabularx}{\textwidth}{|l|l|l|X|}
-  \hline
-  \textbf{日期} & \textbf{作者} & \textbf{版本} & \textbf{更改参考}\\
-  \hline
-  2012-9-27&叶晓军，杨曦华，钟宇腾，柯毅豪&V0.1&需求文档初版\\
-  \hline
-  2012-10-11&叶晓军，杨曦华，钟宇腾，柯毅豪&V0.2&语言表达错误及文章格式修正\\
-  \hline
-  2012-10-12&钟宇腾&V0.3&文章排版修正\\
-  \hline
-  2012-10-13&杨曦华，叶晓军，钟宇腾&V0.4&设计文档初版\\
-  \hline
-  2012-10-13&柯毅豪，杨曦华&V0.4&需求文档修正\\
-  \hline
-  2012-10-14&杨曦华&V0.5&设计文档增加插图\\
-  \hline
-  2012-10-14&叶晓军，钟宇腾&V0.5&设计文档编写\\
-  \hline
-  2012-10-21&叶晓军，杨曦华，钟宇腾&V0.6&设计文档排版及插图修正\\
-  \hline
-\end{tabularx}
 \newpage
 
 \tableofcontents
@@ -82,12 +94,15 @@ pdfborder={1 0 0}, citecolor=black ]{hyperref}
 \rhead{分析与设计}
 
 % 教务系统分析
+\newpage
 \input{analysis.tex}
 
 % 教务系统设计
+\newpage
 \input{design.tex}
 
 % 分工
+\newpage
 \input{divtask.tex}
 
 \newpage
