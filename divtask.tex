@@ -1,21 +1,38 @@
+\appendix
 \begin{center}
-  \section{附录}
+  \section{人员职责与分工}
 \end{center}
 
 \subsection{人员职责与分工}
 \begin{itemize}
-  \item 叶晓军：项目经理、算法设计师，主要负责项目人员组织、进度管理、系统业务逻辑设计
-  \item 杨曦华：前端工程师，主要负责系统前端设计
-  \item 柯毅豪：后台工程师，主要负责系统后台设计、系统部署
-  \item 钟宇腾：架构师，主要负责系统架构设计、技术顾问
+  \item 叶晓军：组长，主要负责项目人员组织、进度管理、系统业务逻辑设计
+  \item 杨曦华：主要负责系统前端设计
+  \item 柯毅豪：主要负责系统后台设计、系统部署
+  \item 钟宇腾：主要负责系统架构设计、代码管理
 \end{itemize}
 系统测试与性能调优由全体成员共同完成。
 
 \subsection{系统开发日志}
 \subsubsection{系统架构}
 \begin{itemize}
-  \item Django框架？
-  \item Bootstrap工具包？
+  \item Django Web~框架（项目主页：https://www.djangoproject.com/）
+  
+  \CJKindent Django Web~框架是一个高级~Python\footnotemark[1] Web~框架，提供~ORM (~Object-relational mapper)~方法，可以完全使用~Python~来定义数据库的表及其元素，并封装了大量的数据库访问~API~，把数据库元素映射为~Python~内部类型，实现兼容多种数据库后台；提供~Template~系统，可以在~HTML~中嵌入~Python~代码便于服务器动态生成页面；提供缓存模块，提高服务器运行效率。
+  
+  \item Bootstrap前端框架与交互组件集（项目主页：http://twitter.github.com/bootstrap/）
+  
+  \CJKindent Bootstrap~是快速开发~Web~应用程序的前端工具包。它是一个~CSS~和~HTML~的集合，它使用了最新的浏览器技术，给~Web~开发提供了时尚的版式、表单、按钮、表格、网格系统等等。
 \end{itemize}
+
+\footnotetext[1]{Python~是一种面向对象的解析性编程语言、动态语言，支持命令式程序设计、面向对象程序设计、函数式编程、面向切面编程、泛型编程多种编程范式，具备垃圾回收功能，能够自动管理储存器使用。语言设计的哲学是“用一种方法，最好是只有一种方法来做一件事”，语法简洁少有岐义，代码可读性高。}
+
 \subsubsection{代码托管与版本控制}
-Github?
+\begin{itemize}
+  \item Git~版本控制系统
+  
+  \CJKindent Git是一个由~Linus Benedict Torvalds~为了更好地管理~Linux~内核开发而创立的分布式版本控制/软件配置管理软件。与常用的版本控制工具~CVS、Subversion~等不同，它采用了分布式版本库的方式，不必服务器端软件支持，使源代码的发布和交流极其方便。~Git~的速度很快，这对于诸如~Linux kernel~这样的大项目来说自然很重要。~Git~最为出色的是它的合并跟踪（~merge tracing~）能力。
+  
+  \item GitHub
+  
+  \CJKindent GitHub~是一个用于使用Git版本控制系统的项目的基于互联网的存取服务，提供了像 feeds，followers 和显示开发者们怎样在他们的版本库的版本上工作的网络图表。根据在2009年的Git用户调查，GitHub是最流行的Git存取站点。
+\end{itemize}
