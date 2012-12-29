@@ -7,15 +7,50 @@
 
 \subsubsection{表示层}
   
-表示层是用户与系统交互的界面，负责获取用户的请求和信息，展示系统的操作结果给用户。本系统表示层的边界类包括：“登录认证”（~\texttt{AuthorizationForm}~）、“课程管理”（~\texttt{CourseForm}~）、“教学评分”（~\texttt{EvaluationForm}~）、“成绩管理”（~\texttt{ScoreForm}~）和“管理员维护”（~\texttt{AdminForm}~）。
+表示层是用户与系统交互的界面，负责获取用户的请求和信息，展示系统的操作结果给用户。本系统表示层的边界类包括
+
+\begin{itemize}
+  \item 登录认证（~\texttt{Login}~）
+  \item 学生选课退课（~\texttt{StudentGetCourse}~）
+  \item 学生教学计划（~\texttt{StudentGetPlan}~）
+  \item 学生查看课表（~\texttt{StudentGetSchedule}~）
+  \item 学生教学评分（~\texttt{StudentGetAssessment}~）
+  \item 学生成绩报告（~\texttt{StudentGetScore}~）
+  \item 教师开课计划（~\texttt{TeacherGetPlan}~）
+  \item 教师成绩管理（~\texttt{TeacherManageScore}~）
+  \item 管理员学籍管理（~\texttt{AdministratorManageSchoolroll}~）
+  \item 管理员教籍管理（~\texttt{AdministratorManageTeacherpost}~）
+  \item 管理员查看评教（~\texttt{AdministratorViewAssessment}~）
+  \item 管理员课程管理（~\texttt{AdministratorManageCourse}~）
+  \item 管理员成绩管理（~\texttt{AdministratorManageScore}~）
+\end{itemize}
   
 \subsubsection{控制层}
   
-控制层是系统业务逻辑的核心，控制管理系统的运行。它负责接收用户的请求和信息，调用实体层的数据，执行系统的业务逻辑操作，并最终将操作结果返回给用户。本系统控制层的控制类包括：“用户管理”（~\texttt{UserController}~）、“课程管理”（~\texttt{CourseController}~）、“成绩管理”（~\texttt{ScoreController}~）和“教学评分管理”（~\texttt{EvaluationForm}~）。
+控制层是系统业务逻辑的核心，控制管理系统的运行。它负责接收用户的请求和信息，调用实体层的数据，执行系统的业务逻辑操作，并最终将操作结果返回给用户。本系统控制层的控制类包括：
+\begin{itemize}
+  \item 用户管理（~\texttt{user.views}~）
+  \item 学生管理（~\texttt{student.views}~）
+  \item 老师管理（~\texttt{teacher.views}~）
+  \item 管理员管理（~\texttt{administrator.views}~）
+  \item 课程管理（~\texttt{course.views}~）  
+  \item 评教管理（~\texttt{assessment.views}~）
+  \item 选课信息管理（~\texttt{take.views}~）
+  \item 学院信息管理（~\texttt{school.views}~）
+  \item 界面渲染控制类（~\texttt{EduAdminSystem.views}~）
+\end{itemize}
   
 \subsubsection{实体层}
   
-实体层是系统的数据实体层，在实体层与控制层之间是数据访问对象层（DAO），DAO层提供了控制层访问实体层的接口方法。本系统实体层的模块(实体类)包括：“课程信息”（~\texttt{Course, CourseTime, Session, School, Department}~）、“选课信息”（~\texttt{Take}~）、“教学评分信息”（~\texttt{Assessment, CourseArrangement}~）和“用户信息”（~\texttt{User, Administrator, Teacher, Student, StudentMeta, Permission}~）。
+实体层是系统的数据实体层，在实体层与控制层之间是数据访问对象层（DAO），DAO层提供了控制层访问实体层的接口方法。本系统实体层的模块(实体类)包括：
+\begin{itemize}
+  \item 学院信息（~\texttt{School, Department, Speciality, Class}~
+  \item 课程信息（~\texttt{Course, CourseTime}~）
+  \item 选课信息（~\texttt{Take}~）
+  \item 教学评分信息（~\texttt{Assessment}~）
+  \item 用户信息（~\texttt{User, Administrator, Teacher, Student, StudentMeta, Permission}~）
+  \item 全局状态信息（~\texttt{GlobalData}~）
+\end{itemize}
 
 \begin{figure}[H]
   \centering
