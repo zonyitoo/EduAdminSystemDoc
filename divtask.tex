@@ -15,8 +15,9 @@
 \newpage
 
 \begin{center}
-  \section{系统开发日志}
+  \section{项目开发使用的技术说明}
 \end{center}
+
 \subsection{系统架构}
 \begin{itemize}
   \item Django Web~框架（项目主页：https://www.djangoproject.com/）
@@ -27,6 +28,12 @@
   
   \CJKindent 本系统前端基于~Bootstrap~模板进行开发。~Bootstrap~是用于快速开发~Web~应用的前端工具包。它是一个~HTML, CSS, JavaScript~的集合，它使用了最新的浏览器技术，给~Web~开发提供了时尚的版式、表单、按钮、表格、网格系统等等。
 \end{itemize}
+
+本系统是一个基于~Web 2.0~架构的系统，前端使用~AJAX (Asynchronous JavaScript and XML)~来动态显示内容和响应用户输入，服务器采用~Django~网络框架处理数据。在处理请求时不返回整个网页而是只返回用~JSON (Javascript Object Notation)~表示的数据，前端框架处理数据并呈现，不刷新整个页面而只更新页面的部分内容。
+
+采用此架构可以节约网格资源，在服务器处理大量情求时（如选课时期），可以节约服务器资源和网络带宽，提高网站的响应速度，减轻服务器负担。
+
+本系统在设计时充分考虑到跨平台的需要，兼容绝大多数主流的浏览器（包含桌面系统与手持设备系统的浏览器），在呈现时自动检测显示区域分辨率，若检测到是手持设备的分辨率，则会显示一个专门优化过的页面，提升用户体验。
 
 \footnotetext[1]{Python~是一种面向对象的解析性编程语言、动态语言，支持命令式程序设计、面向对象程序设计、函数式编程、面向切面编程、泛型编程多种编程范式，具备垃圾回收功能，能够自动管理储存器使用。语言设计的哲学是“用一种方法，最好是只有一种方法来做一件事”，语法简洁少有岐义，代码可读性高。}
 
@@ -43,6 +50,16 @@
   \CJKindent 我们的项目托管于~GitHub~，地址为~https://github.com/zonyitoo/SYSUEduAdminSystem~，使用~Git~版本控制系统来进行版本控制和软件配置管理。
 \end{itemize}
 
+\subsection{数据库}
+我们的项目使用~PostgreSQL~数据库作为数据库后台，~PostgreSQL~是自由的对象-关系数据库服务器（数据库管理系统），在灵活的~BSD~许可证下发行。~PostgreSQL~使用~SQL~语言来在执行资料的查询。这些资料通过连外键联系在一起，以一系列表格的形式存在。~PostgreSQL~相对于竞争者的主要优势，主要的特征为可编程性：对于使用数据库资料的实际应用，~PostgreSQL~让开发与使用的工作，变得更加容易。与PostgreSQl配合的开源软件很多，有很多分布式集群软件，如pgpool、pgcluster、slony、plploxy等等，很容易做读写分离、负载均衡、数据水平拆分等方案。
+
+教务系统经常需要处理高并发情形，~PostgreSQL~是多进程的，在并发不高时处理速度略慢于~MySQL~等多线程数据库，但当并发高的时候，对于现在多核的单台机器上，~PostgreSQL~能利用多核处理器的并发处理优势，整体性能优于其它基于多线程的数据库。
+
+\newpage
+\begin{center}
+  \section{系统开发日志}
+\end{center}
+
 \begin{figure}[H]
    \centering \includegraphics[width=\textwidth]{img/contrib.png}
    \caption{项目成员贡献及项目提交数与时间关系图}
@@ -57,4 +74,8 @@
    \caption{项目代码变化图}
 \end{figure}
 
-图中虚线是代表代码行数的变化与时间的关系，2012年12月23日后代码行数超过了2.6万。中央横线以上的图中，高度代表该时间段增加的代码行数；中央横线以下的图中，高度代表该时间段被删除的代码行数，总体体现了代码增加的速度。
+图中虚线是代表代码行数的变化与时间的关系，2012年12月23日后代码行数超过了2.6万。中央横线以上的图中，高度代表该时间段增加的代码行数；中央横线以下的图中，高度代表该时间段被删除的代码行数，总体体现了代码增加的速度。\vspace{2em}
+
+项目托管主页：https://github.com/zonyitoo/SYSUEduAdminSystem
+
+项目统计图：https://github.com/zonyitoo/SYSUEduAdminSystem/graphs
