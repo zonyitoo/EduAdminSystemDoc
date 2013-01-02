@@ -30,12 +30,12 @@
   
   \item PostgreSQL数据库
   
-  \CJKindent 我们的项目使用~PostgreSQL~数据库作为数据库后台，~PostgreSQL~是自由的对象-关系数据库服务器（数据库管理系统），在灵活的~BSD~许可证下发行。~PostgreSQL~使用~SQL~语言来在执行资料的查询。这些资料通过连外键联系在一起，以一系列表格的形式存在。~PostgreSQL~相对于竞争者的主要优势，主要的特征为可编程性：对于使用数据库资料的实际应用，~PostgreSQL~让开发与使用的工作，变得更加容易。与PostgreSQl配合的开源软件很多，有很多分布式集群软件，如pgpool、pgcluster、slony、plploxy等等，很容易做读写分离、负载均衡、数据水平拆分等方案。
+  \CJKindent 我们的项目使用~PostgreSQL~数据库作为数据库后台，~PostgreSQL~是自由的对象-关系数据库服务器（数据库管理系统），在灵活的~BSD~许可证下发行。~PostgreSQL~使用~SQL~语言来在执行资料的查询。这些资料通过连外键联系在一起，以一系列表格的形式存在。~PostgreSQL~相对于竞争者的主要优势，主要的特征为可编程性：对于使用数据库资料的实际应用，~PostgreSQL~让开发与使用的工作，变得更加容易。与~PostgreSQL~配合的开源软件很多，有很多分布式集群软件，如~pgpool~、~pgcluster~、~slony~、~plploxy~等等，很容易做读写分离、负载均衡、数据水平拆分等方案。
   
   \CJKindent 教务系统经常需要处理高并发情形，~PostgreSQL~是多进程的，在并发不高时处理速度略慢于~MySQL~等多线程数据库，但当并发高的时候，对于现在多核的单台机器上，~PostgreSQL~能利用多核处理器的并发处理优势，整体性能优于其它基于多线程的数据库。
 \end{itemize}
 
-本系统是一个基于~Web 2.0~架构的系统，前端使用~AJAX (Asynchronous JavaScript and XML)~来动态显示内容和响应用户输入，服务器采用~Django~网络框架处理数据。在处理请求时不返回整个网页而是只返回用~JSON (Javascript Object Notation)~表示的数据，前端框架处理数据并呈现，不刷新整个页面而只更新页面的部分内容。
+本系统是一个基于~Web 2.0~架构的系统，前端使用~AJAX (Asynchronous JavaScript and XML)~来动态显示内容和响应用户输入，服务器采用~Django~网络框架处理数据。在处理请求时不返回整个网页而是只返回用~JSON (JavaScript Object Notation)~表示的数据，前端框架处理数据并呈现，不刷新整个页面而只更新页面的部分内容。
 
 采用此架构可以节约网格资源，在服务器处理大量情求时（如选课时期），可以节约服务器资源和网络带宽，提高网站的响应速度，减轻服务器负担。
 
